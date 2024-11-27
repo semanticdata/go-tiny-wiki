@@ -60,7 +60,7 @@ func getFileName(title string) string {
 }
 
 func ParsePageTemplates() *template.Template {
-	return template.Must(template.ParseFiles("pages/edit.html", "pages/view.html", "pages/home.html"))
+	return template.Must(template.ParseFiles("pages/edit.html", "pages/view.html", "pages/index.html"))
 }
 
 func EnsureDataDirExists() error {

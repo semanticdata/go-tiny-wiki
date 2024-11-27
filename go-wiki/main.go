@@ -57,7 +57,7 @@ func makeHandler(fn func(http.ResponseWriter, *http.Request, string)) http.Handl
 
 func viewHomeHandler(w http.ResponseWriter, r *http.Request) {
 	hotPages := pages.LoadHotPages()
-	err := templates.ExecuteTemplate(w, "home.html", hotPages)
+	err := templates.ExecuteTemplate(w, "index.html", hotPages)
 	if err != nil {
 		writeError(w, err)
 	}
@@ -80,7 +80,7 @@ func main() {
 		panic(err)
 	}
 
-	http.HandleFunc("/home", viewHomeHandler)
+	http.HandleFunc("/", viewHomeHandler)
 	http.HandleFunc("/view/", makeHandler(viewHandler))
 	http.HandleFunc("/edit/", makeHandler(editHandler))
 	http.HandleFunc("/save/", makeHandler(saveHandler))
