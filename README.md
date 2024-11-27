@@ -4,7 +4,7 @@ A simple wiki server that store pages on a txt file. If the page doesn't exists,
 
 To start the wiki go to go-wiki and run: `go run .`
 
-The wiki make use of the below **lfu-cache** to keep the most accessed pages in memory. These pages are listed at `localhost:8080/home`.
+The wiki make use of the below **lfu-cache** to keep the most accessed pages in memory. These pages are listed at `localhost:8080`.
 
 ## Inspirations
 
