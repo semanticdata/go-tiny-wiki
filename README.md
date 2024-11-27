@@ -6,17 +6,6 @@ To start the wiki go to go-wiki and run: `go run .`
 
 The wiki make use of the below **lfu-cache** to keep the most accessed pages in memory. These pages are listed at `localhost:8080`.
 
-## Inspirations
-
-The projects on this repository are based/inspired on the following contents:
-
-- Wesley Willians lessons from [Full Cycle Youtube channel](https://www.youtube.com/c/FullCycle/).
-- Table Driven Tests from [Golang Wiki](https://github.com/golang/go/wiki/TableDrivenTests).
-- Writing Web Applications from [Go Blog](https://go.dev/doc/articles/wiki/).
-- Mastering Go HTML Templates from [Philipp Tanlak](https://philipptanlak.com/mastering-html-templates-in-go-the-fundamentals/).
-
-It also follows some guidelines from [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md), like the interface compliance at compile time, function grouping and ordering.
-
 ## lfu-cache
 
 A in-memory cache with Least Frequently Used (LFU) eviction algorithm with O(1) time complexity. The algorithm is inspired on [this paper](https://www.researchgate.net/publication/355493987_An_O1_algorithm_for_implementing_the_LFU_cache_eviction_scheme), that proposes the use of a linked list of linked lists to store the cache items frequency.
@@ -43,6 +32,17 @@ __________________________________________________________
 │       5.000 ± 0%        │  4.000 ± 0%  -20.00% (n=100) │
 ```
 
+## Inspirations
+
+This project is based on [xilapa/go-tiny-projects](https://github.com/xilapa/go-tiny-projects) which itself is based/inspired on the following contents:
+
+- Wesley Willians lessons from [Full Cycle Youtube channel](https://www.youtube.com/c/FullCycle/).
+- Table Driven Tests from [Golang Wiki](https://github.com/golang/go/wiki/TableDrivenTests).
+- Writing Web Applications from [Go Blog](https://go.dev/doc/articles/wiki/).
+- Mastering Go HTML Templates from [Philipp Tanlak](https://philipptanlak.com/mastering-html-templates-in-go-the-fundamentals/).
+
+It also follows some guidelines from [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md), like the interface compliance at compile time, function grouping and ordering.
+
 ## Other Tiny Go Projects
 
-This project is based on [xilapa/go-tiny-projects](https://github.com/xilapa/go-tiny-projects) which included a few other tiny go projects and can be found in another [branch](https://github.com/semanticdata/go-tiny-wiki/tree/bak/2024-11-27). These other projects were removed from the main branch as I am only interested in tinkering with their wiki implementation.
+This project used to include a few other tiny go projects and can be found in another [branch](https://github.com/semanticdata/go-tiny-wiki/tree/bak/2024-11-27). These other projects were removed from the main branch as I am only interested in tinkering with their wiki implementation.
